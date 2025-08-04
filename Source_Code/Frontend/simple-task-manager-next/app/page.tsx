@@ -1,0 +1,13 @@
+// app/page.tsx (optional redirect)
+'use client';
+import { useEffect } from 'react';
+import { useRouter } from 'next/navigation';
+
+export default function Home() {
+  const router = useRouter();
+  useEffect(() => {
+    router.push('/signup');
+  }, [router]);
+  
+  return null; // bisa juga tampilkan loader
+}
