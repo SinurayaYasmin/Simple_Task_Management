@@ -1,4 +1,7 @@
 Source_Code/Backend/.env
 Source_Code/Frontend/simple-task-manager-next/node_modules
 
-.gitignore
+
+*.exe
+*.out
+*.test

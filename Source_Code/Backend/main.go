@@ -6,6 +6,7 @@ import (
 	"time"
 
 	"net/http"
+	"os"
 
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
@@ -31,6 +32,10 @@ func main() {
 	routes.UserRoute(r)
 	routes.TaskRoute(r)
 
-	r.Run(":8080")
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8080" // default local
+	}
+	r.Run(":" + port)
 
 }
